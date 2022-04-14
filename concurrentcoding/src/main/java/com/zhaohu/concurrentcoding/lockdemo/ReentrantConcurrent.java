@@ -57,6 +57,9 @@ public class ReentrantConcurrent {
         System.out.println("输入" + num);
         printCondition.signal();
         lock.unlock();
+
+        lock.getHoldCount();
+
     }
 
     public void print() throws InterruptedException {
