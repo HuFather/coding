@@ -28,6 +28,6 @@ class DeadLockTest {
             }
         }).start();
 
-        Thread.sleep(10000);
+        Thread.sleep(100000);
     }
 }
