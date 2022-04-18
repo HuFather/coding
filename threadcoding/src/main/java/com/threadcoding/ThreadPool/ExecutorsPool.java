@@ -8,14 +8,5 @@ import java.util.concurrent.*;
  * @description :
  */
 public class ExecutorsPool {
-    public static void main(String[] args) {
-        ExecutorService service= Executors.newFixedThreadPool(2);
-        service.submit(()->{
 
-        });
-        ArrayBlockingQueue queue=new ArrayBlockingQueue(10);
-
-        new ThreadPoolExecutor(2,5,6000, TimeUnit.MILLISECONDS,queue);
-
-    }
 }
