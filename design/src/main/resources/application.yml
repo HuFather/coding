@@ -1,0 +1,19 @@
+current-limiting:
+  - app-id: first
+      limits:
+      - api: /home/hello
+        limit: 100
+        unit: 1
+      - api: /home/hello
+        limit: 100
+        unit: 1
+  - app-id: seconde
+      limits:
+        - api: /home/hello
+          limit: 100
+          unit: 1
+        - api: /home/hello
+          limit: 100
+          unit: 1
+
+
