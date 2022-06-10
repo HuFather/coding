@@ -9,5 +9,9 @@ public class ConcurrentQueue {
     public static void main(String[] args) {
         BlockingQueue queue=new ArrayBlockingQueue(10);
         queue=new LinkedBlockingQueue();
+        String a=":ss";
+        a+="dd";
+        char c=a.charAt(0);
+        System.out.println(a);
     }
 }
