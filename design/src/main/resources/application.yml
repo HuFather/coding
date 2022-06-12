@@ -1,19 +1,20 @@
-current-limiting:
-  - app-id: first
-      limits:
-      - api: /home/hello
-        limit: 100
-        unit: 1
-      - api: /home/hello
-        limit: 100
-        unit: 1
-  - app-id: seconde
-      limits:
-        - api: /home/hello
-          limit: 100
-          unit: 1
-        - api: /home/hello
-          limit: 100
-          unit: 1
+configs:
+- app_id: first
+  limits:
+  - api: /home/hello
+    limit: 1000
+    unit: 10
+  - api: /home/hello1
+    limit: 100
+    unit: 100
+- app_id: second
+  limits:
+    - api: /home/hello2
+      limit: 100
+      unit: 1000
+    - api: /home/hello3
+      limit: 1000
+      unit: 1000
+
 
 
