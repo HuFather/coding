@@ -46,21 +46,21 @@ public class UniformRuleConfigMap {
         }
 
 
-//        public void setApp_id(String app_id) {
-//            this.app_id = app_id;
-//        }
-//
-//        public void setLimits(List<ApiLimit> limits) {
-//            this.limits = limits;
-//        }
-//
-//        public void addLimits(List<ApiLimit> limits) {
-//            this.limits.addAll(limits);
-//        }
-//
-//        public void addLimit(ApiLimit limit) {
-//            limits.add(limit);
-//        }
+        public void setApp_id(String app_id) {
+            this.app_id = app_id;
+        }
+
+        public void setLimits(List<ApiLimit> limits) {
+            this.limits = limits;
+        }
+
+        public void addLimits(List<ApiLimit> limits) {
+            this.limits.addAll(limits);
+        }
+
+        public void addLimit(ApiLimit limit) {
+            limits.add(limit);
+        }
     }
 }
 

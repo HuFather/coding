@@ -6,7 +6,7 @@ package com.zhaohu.design.currentlimiting.rule;
  * @description :
  */
 
-class ApiLimit {
+public class ApiLimit {
     private static final int DEFAULT_TIME_UNIT = 1;
     private String api;
     private int limit;
@@ -38,15 +38,15 @@ class ApiLimit {
         return unit;
     }
 
-//    public void setApi(String api) {
-//        this.api = api;
-//    }
-//
-//    public void setLimit(int limit) {
-//        this.limit = limit;
-//    }
-//
-//    public void setUnit(int unit) {
-//        this.unit = unit;
-//    }
+    public void setApi(String api) {
+        this.api = api;
+    }
+
+    public void setLimit(int limit) {
+        this.limit = limit;
+    }
+
+    public void setUnit(int unit) {
+        this.unit = unit;
+    }
 }
