@@ -22,7 +22,7 @@ public class LimitRule {
     private LimitRule(){}
     static {
         rules=new HashMap<>();
-        UniformRuleConfigMap ruleMap = ApiLimitRule.getRules();
+        UniformRuleConfigMap ruleMap =null;// ApiRateLimitRule.getRules();
         for(UniformRuleConfigMap.AppApiLimit rule:ruleMap.getConfigs()){
             Trie trie=new Trie();
             for(ApiLimit apiLimit: rule.getLimits()) {

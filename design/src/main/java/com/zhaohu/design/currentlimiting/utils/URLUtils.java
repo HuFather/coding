@@ -23,7 +23,7 @@ public class URLUtils {
             throw new InvalidParameterException("error url formant: " + url);
         for (String path : paths) {
             if ((path.contains(".") || path.contains("|") || path.contains("*")) &&
-                    (!path.startsWith("(") || !path.startsWith(")"))) {
+                    (!path.startsWith("{") || !path.endsWith("}"))) {
                 throw new InvalidParameterException("error url formant: " + url);
             }
 

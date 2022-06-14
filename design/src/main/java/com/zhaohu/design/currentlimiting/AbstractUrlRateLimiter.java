@@ -1,5 +1,6 @@
 package com.zhaohu.design.currentlimiting;
 
+import com.zhaohu.design.currentlimiting.rule.RateLimitRule;
 import com.zhaohu.design.currentlimiting.rule.source.RuleConfigSource;
 
 /**
@@ -16,5 +17,8 @@ public abstract class AbstractUrlRateLimiter implements UrlRateLimiter {
 
     }
 
+    public AbstractUrlRateLimiter(RateLimitRule rule){
+
+    }
 
 }

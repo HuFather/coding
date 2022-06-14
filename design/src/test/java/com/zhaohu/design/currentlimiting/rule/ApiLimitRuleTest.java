@@ -11,18 +11,4 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 class ApiLimitRuleTest {
 
-    @Test
-    void getRules() {
-
-        UniformRuleConfigMap rules = ApiLimitRule.getRules();
-        assertNotNull(rules);
-    }
-
-    @Test
-    void limit() {
-        for (int i = 0; i < 10000; i++) {
-            boolean result= ApiLimitRule.limit("first","/home/hello");
-            assertTrue(result);
-        }
-    }
 }

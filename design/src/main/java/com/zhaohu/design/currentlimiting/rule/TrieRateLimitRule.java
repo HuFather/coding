@@ -26,6 +26,11 @@ public class TrieRateLimitRule {
         root = new Node("/");
     }
 
+    public TrieRateLimitRule(ApiLimit apiLimit){
+        root=new Node("/");
+        addApiLimit(apiLimit);
+    }
+
     public void addApiLimit(ApiLimit apiLimit) {
         String url = apiLimit.getApi();
         if (StringUtils.isEmpty(url) || !url.startsWith("/"))
@@ -60,15 +65,23 @@ public class TrieRateLimitRule {
 
     }
 
+    public void addApiLimits(List<ApiLimit> apiLimits){
+        for (ApiLimit apiLimit:apiLimits){
+            addApiLimit(apiLimit);
+        }
+    }
+
     public ApiLimit getApiLimit(String url) {
         if (StringUtils.isEmpty(url))
             return null;
 
+        if (url.equals("/"))
+            return root.apiLimit;
+
         List<String> paths = URLUtils.tokenizeUrlLimit(url);
         if (paths == null || paths.size() <= 0)
             return null;
-        if (url.equals("/"))
-            return root.apiLimit;
+
         Node p = root;
         ApiLimit apiLimit = null;
         for (int i = 0; i < paths.size(); i++) {
@@ -79,7 +92,7 @@ public class TrieRateLimitRule {
                 for (Map.Entry<String, Node> node : p.getEdges().entrySet()) {
                     Node currentNode = node.getValue();
                     if (currentNode.isPattern) {
-                        boolean matched = Pattern.matches(current.path, path);
+                        boolean matched = Pattern.matches(currentNode.path, path);
                         if (matched)
                             current = currentNode;
                     }
@@ -111,7 +124,7 @@ public class TrieRateLimitRule {
             stringBuilder.append("(^[0-9]*$)");
         else {
             stringBuilder.append("(");
-            stringBuilder.append(url.substring(start, url.length() - 1));
+            stringBuilder.append(url.substring(start+1, url.length() - 1));
             stringBuilder.append(")");
         }
 
