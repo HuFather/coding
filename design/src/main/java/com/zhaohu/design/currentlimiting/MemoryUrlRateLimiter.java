@@ -6,6 +6,7 @@ package com.zhaohu.design.currentlimiting;
  * @description :
  */
 public class MemoryUrlRateLimiter implements UrlRateLimiter {
+
     @Override
     public void limit(String app, String url) {
 
