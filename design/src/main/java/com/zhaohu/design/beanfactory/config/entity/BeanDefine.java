@@ -13,6 +13,15 @@ public class BeanDefine {
     private List<ConstructorArg> constructorArgs;
     private boolean isSingleton;
     private ScopeEnum scopeEnum=ScopeEnum.SCOPE_SINGLETON;
+    private Class type;
+
+    public Class getType() {
+        return type;
+    }
+
+    public void setType(Class type) {
+        this.type = type;
+    }
 
     public String getId() {
         return id;

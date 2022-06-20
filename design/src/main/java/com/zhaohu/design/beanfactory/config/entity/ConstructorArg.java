@@ -11,6 +11,15 @@ public class ConstructorArg {
     private boolean isRefer;
     private Class type;
     private Object arg;
+    private String id;
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public boolean isRefer() {
         return isRefer;

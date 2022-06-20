@@ -26,11 +26,12 @@ public class XmlApplicationContext implements ApplicationContext {
 
     public XmlApplicationContext(String xmlPath) {
         parser = new XmlParser();
-
+        load(xmlPath);
     }
 
     private void load(String xmlPath) {
 
+        List<BeanDefine> list = parser.parser(xmlPath);
         List<BeanDefine> beanDefineList = new ArrayList<>();
 
         beanFactory.addBeans(beanDefineList);
@@ -38,6 +39,6 @@ public class XmlApplicationContext implements ApplicationContext {
 
     @Override
     public Object getBean(String beanId) {
-        return null;
+        return beanFactory.getBean(beanId);
     }
 }
