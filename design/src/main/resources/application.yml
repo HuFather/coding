@@ -4,9 +4,11 @@ configs:
   - api: /home/hello
     limit: 1000
     unit: 10
+    auto: true
   - api: /home/hello1
     limit: 100
     unit: 100
+    auto: false
 - app_id: second
   limits:
     - api: /home/hello2

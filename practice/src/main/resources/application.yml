@@ -1,0 +1,13 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: practice
+  redis:
+    host: 10.201.82.236
+    port: 6379
+    database: 6
+    password:
+
+
