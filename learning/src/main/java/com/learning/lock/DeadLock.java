@@ -1,4 +1,4 @@
-package com.threadcoding.lock;
+package com.learning.lock;
 
 /**
  * @creator : zhaohu

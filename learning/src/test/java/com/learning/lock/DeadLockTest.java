@@ -1,9 +1,7 @@
-package com.threadcoding.lock;
+package com.learning.lock;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @creator : zhaohu

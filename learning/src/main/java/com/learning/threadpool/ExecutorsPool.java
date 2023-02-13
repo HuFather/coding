@@ -1,6 +1,4 @@
-package com.threadcoding.ThreadPool;
-
-import java.util.concurrent.*;
+package com.learning.ThreadPool;
 
 /**
  * @creator : zhaohu
